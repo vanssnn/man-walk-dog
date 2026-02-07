@@ -7,11 +7,11 @@ class_name PlatformerComponent
 @onready var coyote_timer: Timer = $CoyoteTimer
 
 
-@export var jump_sfx: AudioStream = preload("res://audio/sfx/Jump_Sound.wav")
+@export var jump_sfx: AudioStream = preload("res://audio/sfx/sound-jump.wav")
 @export var land_sfx: AudioStream
 @export var walk_sfx: AudioStream
 @export var die_sfx: AudioStream = preload("res://audio/sfx/GameOver.wav")
-@export var flip_sfx: AudioStream
+@export var flip_sfx: AudioStream = preload("res://audio/sfx/flip_gravity.wav")
 
 var gravity_dir: int = 1
 

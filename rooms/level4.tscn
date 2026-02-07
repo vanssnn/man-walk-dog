@@ -449,7 +449,7 @@ tile_set = SubResource("TileSet_521tj")
 [node name="ManCB" parent="." instance=ExtResource("3_p1m0k")]
 position = Vector2(80, 288)
 
-[node name="PlatformerComponent" parent="ManCB" index="0"]
+[node name="PlatformerComponent" parent="ManCB" index="1"]
 movement_mode = 1
 
 [node name="DogRB" parent="." instance=ExtResource("4_0w1qf")]

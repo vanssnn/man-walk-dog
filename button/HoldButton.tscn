@@ -1,8 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://6h2lfxd0lx6b"]
+[gd_scene load_steps=7 format=3 uid="uid://6h2lfxd0lx6b"]
 
 [ext_resource type="Script" uid="uid://d0ndqhnosti4c" path="res://button/hold_button.gd" id="1_fquae"]
+[ext_resource type="Texture2D" uid="uid://cjsuxq8ouda4m" path="res://button/Button.png" id="2_nwpc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_235xs"]
+atlas = ExtResource("2_nwpc3")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgrts"]
+atlas = ExtResource("2_nwpc3")
+region = Rect2(32, 0, 32, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nwpc3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_235xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgrts")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_235xs"]
 

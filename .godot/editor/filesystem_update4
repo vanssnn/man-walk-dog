@@ -16,3 +16,5 @@ res://button/hold_button.gd
 res://button/HoldButton.tscn
 res://Hurtbox/hurtbox.tscn
 res://rooms/level_test.gd
+res://switch/Switch.tscn
+res://switch/switch.gd

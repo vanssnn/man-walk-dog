@@ -1,6 +1,8 @@
 extends Area2D
 class_name HoldButton
 
+@onready var sprite: AnimatedSprite2D = $HoldButton
+
 signal activated
 signal deactivated
 
@@ -14,6 +16,7 @@ func _on_body_entered(body):
 	bodies_on_top += 1
 	if not active:
 		active = true
+		sprite.frame = 1
 		activated.emit()
 
 func _on_body_exited(body):
@@ -25,4 +28,5 @@ func _on_body_exited(body):
 		bodies_on_top = 0
 		if active:
 			active = false
+			sprite.frame = 0
 			deactivated.emit()

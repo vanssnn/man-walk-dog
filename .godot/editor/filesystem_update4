@@ -1,6 +1,6 @@
 res://components/platformer_component.tscn
+res://components/platformer_component.gd
 res://rooms/menu.tscn
 res://man/man_cb.tscn
 res://rooms/level_test.tscn
 res://dog/dog_cb.tscn
-res://components/platformer_component.gd

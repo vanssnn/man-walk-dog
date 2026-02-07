@@ -266,9 +266,8 @@ func start_death_animation() -> void:
 	death_tween.finished.connect(_on_death_animation_finished)
 
 func _on_death_animation_finished() -> void:
-	# 3. Restart the current scene
 	print("Death animation completed! Restarting...")	
-	SceneManager.change_scene(get_tree().current_scene.scene_file_path, { "pattern": "squares" })
+	
 
 #func _on_death_animation_finished() -> void:
 	#print("Death animation completed!")

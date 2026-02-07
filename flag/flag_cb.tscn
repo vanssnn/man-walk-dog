@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfn5ltolnk4sa" path="res://components/platformer_component.tscn" id="2_ocdhv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkval"]
-radius = 8.0
-height = 32.0
+radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hyso"]
 size = Vector2(34, 42)

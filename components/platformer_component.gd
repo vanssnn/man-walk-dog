@@ -10,8 +10,8 @@ enum MovementMode {
 }
 @export var movement_mode: MovementMode = MovementMode.NORMAL_JUMP
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var SPEED = 300.0
+@export var JUMP_VELOCITY = -400.0
 var gravity_dir: int = 1 # 1 for down and -1 for up
 
 func _physics_process(delta: float) -> void:	

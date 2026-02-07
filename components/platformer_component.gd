@@ -15,6 +15,12 @@ const JUMP_VELOCITY = -400.0
 var gravity_dir: int = 1 # 1 for down and -1 for up
 
 func _physics_process(delta: float) -> void:	
+	if parent.has_node("HealthComponent"):
+		var health := parent.get_node("HealthComponent")
+		if health.is_dead:
+			is_active = false
+		
+	
 	match movement_mode:
 		MovementMode.NORMAL_JUMP:
 			normal_jump_mode(delta)
@@ -24,7 +30,7 @@ func _physics_process(delta: float) -> void:
 
 func horizontal_movement() -> void:
 	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
+	if direction and is_active:
 		parent.velocity.x = direction * SPEED
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, 0, SPEED)	

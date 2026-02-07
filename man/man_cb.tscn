@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://h65bbw8cw0ou" path="res://man/man.png" id="2_51gkb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l2o8o"]
-radius = 11.0
+radius = 8.0
 height = 26.0
 
 [node name="ManCB" type="CharacterBody2D" groups=["man"]]
@@ -19,5 +19,4 @@ collision_mask = 3
 texture = ExtResource("2_51gkb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_l2o8o")

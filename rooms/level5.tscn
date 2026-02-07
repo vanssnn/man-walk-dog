@@ -409,19 +409,19 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_o1gcv")
 
-[node name="Level1" type="Node2D"]
+[node name="Level5" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 19.0
-offset_right = 210.0
-offset_bottom = 49.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 202.0
+offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "1. Man Walk Dog"
+text = "5. Upside Down"
 label_settings = SubResource("LabelSettings_cpwjf")
 
 [node name="WorldBound" type="Node2D" parent="."]
@@ -461,6 +461,6 @@ target_b = NodePath("../DogRB")
 
 [node name="Flag" parent="." instance=ExtResource("6_4nqgw")]
 position = Vector2(585, 84)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/level6.tscn"
 
 [editable path="ManCB"]

@@ -11,10 +11,23 @@ signal toggled(is_on: bool)
 var can_toggle := true
 var is_on := false
 
+var tween: Tween = null
+
 func _ready():
 	cooldown.wait_time = cooldown_time
 	cooldown.one_shot = true
 	cooldown.timeout.connect(_on_cooldown_timeout)
+	
+	if tween != null:
+		tween.kill()
+	tween = get_tree().create_tween()
+	tween.set_loops()
+	
+	var start_y = sprite.position.y
+	
+	tween.tween_property(sprite, "position:y", start_y - 2, 0.8).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(sprite, "position:y", start_y + 2, 0.8).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("dog") and not body.is_in_group("man"):

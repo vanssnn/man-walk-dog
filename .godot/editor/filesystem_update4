@@ -11,3 +11,6 @@ res://rooms/word_puzzle.gd
 res://flag/flag.gd
 res://flag/flag_cb.gd
 res://components/health_component.tscn
+res://components/health_component.gd
+res://dog/dog_rb.tscn
+res://Hurtbox/hurtbox.gd

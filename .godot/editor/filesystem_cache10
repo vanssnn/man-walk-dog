@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1770455807
+::res://::1770457488
 icon.svg::CompressedTexture2D/CompressedTexture2D::7816271066602428598::1770448397::1770448685::1::::<><><>0<>0<>cdf7a7888b9f0bc9786aa619df658b63<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1770448397::0::1::::<><><>0<>0<><>::
 ::res://addons/::1770448397
@@ -25,12 +25,12 @@ scribbles.png::CompressedTexture2D/CompressedTexture2D::2812175283927716421::177
 squares.png::CompressedTexture2D/CompressedTexture2D::4484147373352580222::1770448397::1770448685::1::::<><><>0<>0<>c4a9833846430f54ada5431e93bb2f5e<>res://.godot/imported/squares.png-a8c8144d665aa3e0d712474304ad6e6f.s3tc.ctex::
 vertical.png::CompressedTexture2D/CompressedTexture2D::6321667921096867211::1770448397::1770448685::1::::<><><>0<>0<>c03c0a83a889f603bb412cb3a6dbf923<>res://.godot/imported/vertical.png-5d237b9ea3cdd66e653ef032da0bd507.s3tc.ctex::
 ::res://animations/::1770450100
-::res://components/::1770455760
-platformer_component.gd::GDScript::6967368309757869605::1770455760::0::1::::PlatformerComponent<>Node2D<><>0<>0<><>::
-platformer_component.tscn::PackedScene::7538885353676693720::1770455760::0::1::::<><><>0<>0<><>::uid://c6jbskcenvsoj::::res://components/platformer_component.gd
-::res://dog/::1770455760
+::res://components/::1770457341
+platformer_component.gd::GDScript::6967368309757869605::1770457372::0::1::::PlatformerComponent<>Node2D<><>0<>0<><>::
+platformer_component.tscn::PackedScene::7538885353676693720::1770457016::0::1::::<><><>0<>0<><>::uid://c6jbskcenvsoj::::res://components/platformer_component.gd
+::res://dog/::1770457016
 dog.png::CompressedTexture2D/CompressedTexture2D::6862779332967420286::1770448397::1770448685::1::::<><><>0<>0<>68662f610560ed42e9949531c404f030<>res://.godot/imported/dog.png-4685f0e56125f9072193f5cbe6dc9765.ctex::
-dog_cb.tscn::PackedScene::7016574317465852575::1770455760::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
+dog_cb.tscn::PackedScene::7016574317465852575::1770457016::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
 dog_rb.tscn::PackedScene/PackedScene::4671158472516582656::1770448397::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png
 ::res://flag/::1770448685
 flag.gd::GDScript/GDScript::4867829571947740062::1770448397::0::1::::<>Area2D<><>0<>0<><>::
@@ -44,17 +44,17 @@ KenPixel Mini.ttf::FontFile/FontFile::815124958452802336::1770448397::1770448685
 ::res://ground/::1770448685
 tileset_ground.png::CompressedTexture2D/CompressedTexture2D::1420889691035219903::1770448397::1770448685::1::::<><><>0<>0<>6565e55e8e378b85e07dc48bf41f9dea<>res://.godot/imported/tileset_ground.png-7059f14d4807851b60bcf5ac11365e98.ctex::
 tileset_ground.tres::TileSet/TileSet::5915440137343251374::1770448397::0::1::::<><><>0<>0<><>::uid://uij30seenx64::::res://ground/tileset_ground.png
-::res://man/::1770455760
+::res://man/::1770457016
 man.png::CompressedTexture2D/CompressedTexture2D::557140999430961604::1770448397::1770448685::1::::<><><>0<>0<>fc7f1226d646d9ebc613e4d6230fb5b6<>res://.godot/imported/man.png-4639e04193b354a591207a0a17cbcbfa.ctex::
-man_cb.tscn::PackedScene::3778522121441495707::1770455760::0::1::::<><><>0<>0<><>::uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn<>uid://h65bbw8cw0ou::::res://man/man.png
+man_cb.tscn::PackedScene::3778522121441495707::1770457016::0::1::::<><><>0<>0<><>::uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn<>uid://h65bbw8cw0ou::::res://man/man.png
 man_rb.tscn::PackedScene/PackedScene::7835664000334708129::1770448397::0::1::::<><><>0<>0<><>::uid://h65bbw8cw0ou::::res://man/man.png
-::res://rooms/::1770455760
-level1.tscn::PackedScene/PackedScene::8364610890532625604::1770448397::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn
-level2.tscn::PackedScene/PackedScene::4460233071112216520::1770448397::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://c6747oxcun7o2::::res://dog/dog_cb.tscn
-level3.tscn::PackedScene/PackedScene::498145164082555606::1770448397::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://bpi3d6m0k5at8::::res://flag/flag_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
-level_test.tscn::PackedScene::5873194303287769348::1770455760::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
+::res://rooms/::1770457341
+level1.tscn::PackedScene::8364610890532625604::1770457341::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn
+level2.tscn::PackedScene::4460233071112216520::1770457341::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://c6747oxcun7o2::::res://dog/dog_cb.tscn
+level3.tscn::PackedScene::498145164082555606::1770457341::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://bpi3d6m0k5at8::::res://flag/flag_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
+level_test.tscn::PackedScene::5873194303287769348::1770457016::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
 menu.gd::GDScript/GDScript::2474104471201991547::1770448397::0::1::::<>Control<><>0<>0<><>::
-menu.tscn::PackedScene::8926445041012170261::1770455760::0::1::::<><><>0<>0<><>::uid://bbiqey46hxhxj::::res://rooms/menu.gd<>uid://835wotskv3ee::::res://fonts/KenPixel Mini Square.ttf
+menu.tscn::PackedScene::8926445041012170261::1770457016::0::1::::<><><>0<>0<><>::uid://bbiqey46hxhxj::::res://rooms/menu.gd<>uid://835wotskv3ee::::res://fonts/KenPixel Mini Square.ttf
 ::res://rope/::1770448397
 rope.gd::GDScript/GDScript::6460594865262429570::1770448397::0::1::::<>Node2D<><>0<>0<><>::
 rope.tscn::PackedScene/PackedScene::8961582633724236680::1770448397::0::1::::<><><>0<>0<><>::uid://cybtb2416kajq::::res://rope/rope.gd

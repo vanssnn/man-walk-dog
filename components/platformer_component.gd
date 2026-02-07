@@ -15,12 +15,10 @@ enum MovementMode {
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
-var gravity_dir: int = 1 # 1 for down and -1 for up
 
 # Animation state tracking
 var is_jumping: bool = false
 var is_walking: bool = false
-var walk_tween: Tween = null
 var is_dead: bool = false
 var was_on_floor: bool = false  # Track previous frame's floor state
 
@@ -42,7 +40,6 @@ func _physics_process(delta: float) -> void:
 	
 	# Update animation states
 	update_animations()
-	
 	parent.move_and_slide()
 
 # MOVEMENTS
@@ -87,23 +84,51 @@ func gravity_flip_mode(delta: float) -> void:
 		
 	horizontal_movement()
 
+var walk_tween: Tween = null
+var idle_tween: Tween = null
+var jump_tween: Tween = null
+var land_tween: Tween = null
+
 # ANIMATION SYSTEM
 func update_animations() -> void:
-	# Detect actual landing: was in air, now on floor
 	if parent.is_on_floor() and not was_on_floor and is_jumping:
 		is_jumping = false
 		start_land_animation()
 	
-	# Handle walking animation
 	if is_walking and parent.is_on_floor() and not is_jumping:
 		if walk_tween == null or not walk_tween.is_running():
 			start_walk_animation()
 	elif walk_tween != null and walk_tween.is_running():
 		stop_walk_animation()
-	
-	# Update floor state for next frame
+		
+	if not is_walking and not is_jumping and parent.is_on_floor():
+		if idle_tween == null or not idle_tween.is_running():
+			start_idle_animation()
+	elif idle_tween != null and idle_tween.is_running():
+		stop_idle_animation()
 	was_on_floor = parent.is_on_floor()
 
+# IDLE ANIMATION
+func start_idle_animation() -> void:
+	if sprite == null:
+		return
+	if idle_tween != null and idle_tween.is_running():
+		idle_tween.kill()
+	
+	idle_tween = get_tree().create_tween()
+	idle_tween.set_loops()
+	
+	idle_tween.tween_property(sprite, "scale", Vector2(1.0, 0.95), 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	idle_tween.tween_property(sprite, "scale", Vector2(1.0, 1.0), 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func stop_idle_animation() -> void:
+	if idle_tween != null and idle_tween.is_running():
+		idle_tween.kill()
+	
+	if sprite != null:
+		var reset_tween = get_tree().create_tween()
+		reset_tween.tween_property(sprite, "scale", Vector2(1.0, 1.0), 0.2)
+		
 # WALK ANIMATION (Bouncy)
 func start_walk_animation() -> void:
 	if sprite == null:
@@ -132,10 +157,6 @@ func stop_walk_animation() -> void:
 		var reset_tween = get_tree().create_tween()
 		reset_tween.tween_property(sprite, "scale", Vector2(1.0, 1.0), 0.1)
 		reset_tween.parallel().tween_property(sprite, "rotation_degrees", 0, 0.1)
-
-# Add these variables at the top with other animation tracking
-var jump_tween: Tween = null
-var land_tween: Tween = null
 
 func start_jump_animation() -> void:
 	if sprite == null:

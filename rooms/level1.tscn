@@ -410,7 +410,7 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_o1gcv")
 
-[node name="Level2" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15

@@ -48,3 +48,15 @@ text = "Press Anywhere to Start"
 label_settings = SubResource("LabelSettings_cpwjf")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 223.0
+offset_right = 640.0
+offset_bottom = 263.0
+bbcode_enabled = true
+text = "[font=res://fonts/KenPixel Mini Square.ttf][shake]Press anything to start...[/shake][font_size=20][/font_size][/font]"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

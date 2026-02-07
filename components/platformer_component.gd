@@ -5,6 +5,13 @@ class_name PlatformerComponent
 @export var is_active: bool = true
 @onready var sprite: Sprite2D = null
 
+
+@export var jump_sfx: AudioStream = preload("res://audio/sfx/Jump_Sound.wav")
+@export var land_sfx: AudioStream
+@export var walk_sfx: AudioStream
+@export var die_sfx: AudioStream = preload("res://audio/sfx/GameOver.wav")
+@export var flip_sfx: AudioStream
+
 var gravity_dir: int = 1
 
 enum MovementMode {
@@ -21,6 +28,8 @@ var is_jumping: bool = false
 var is_walking: bool = false
 var was_on_floor: bool = false  # Track previous frame's floor state
 
+var is_playing_walk_sfx: bool = false
+
 func _ready():
 	for child in get_parent().get_children():
 		if child is Sprite2D:
@@ -29,9 +38,10 @@ func _ready():
 			
 func _physics_process(delta: float) -> void:	
 	if parent.has_node("HealthComponent"):
-		var health := parent.get_node("HealthComponent")
-		if health.is_dead:
-			is_active = false
+		var health_node := parent.get_node("HealthComponent")
+		if health_node.is_dead:
+			if is_active: # This ensures die() only runs ONCE
+				die() 
 			return
 		
 		
@@ -66,6 +76,9 @@ func normal_jump_mode(delta: float) -> void:
 			parent.velocity.y = JUMP_VELOCITY
 			is_jumping = true
 			start_jump_animation()
+			
+			if jump_sfx:
+				AudioManager.play_sfx(jump_sfx, -10.0)
 		horizontal_movement()
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, 0, SPEED)
@@ -84,6 +97,8 @@ func gravity_flip_mode(delta: float) -> void:
 		is_jumping = true
 		start_flip_animations()
 		start_jump_animation()
+		if flip_sfx:
+			AudioManager.play_sfx(flip_sfx, -5.0)
 		
 	horizontal_movement()
 
@@ -97,19 +112,32 @@ func update_animations() -> void:
 	if parent.is_on_floor() and not was_on_floor and is_jumping:
 		is_jumping = false
 		start_land_animation()
+		if land_sfx:
+			AudioManager.play_sfx(land_sfx, -10.0)
 	
 	if is_walking and parent.is_on_floor() and not is_jumping:
 		if walk_tween == null or not walk_tween.is_running():
 			start_walk_animation()
+		if walk_sfx and not is_playing_walk_sfx:
+			AudioManager.play_sfx(walk_sfx, -15.0)
+			is_playing_walk_sfx = true
 	elif walk_tween != null and walk_tween.is_running():
 		stop_walk_animation()
+		if is_playing_walk_sfx:
+			is_playing_walk_sfx = false
 		
 	if not is_walking and not is_jumping and parent.is_on_floor():
 		if idle_tween == null or not idle_tween.is_running():
 			start_idle_animation()
 	elif idle_tween != null and idle_tween.is_running():
 		stop_idle_animation()
+	
+	if not is_walking and parent.is_on_floor() and is_playing_walk_sfx:
+		is_playing_walk_sfx = false
+	
 	was_on_floor = parent.is_on_floor()
+	
+	
 
 # IDLE ANIMATION
 func start_idle_animation() -> void:
@@ -197,24 +225,41 @@ func start_flip_animations() -> void:
 	tween.tween_property(parent, "rotation_degrees", target_rotation, 1.0).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
 
 # DEATH ANIMATION (Flicker)
+# Inside platformer_component.gd
+
 func start_death_animation() -> void:
 	if sprite == null:
 		return
+	
 	is_active = false
 	parent.velocity = Vector2.ZERO
 	
+	# 1. Play the Game Over SFX
+	# We use AudioManager (the Autoload) so it survives the player being disabled
+	if die_sfx:
+		AudioManager.play_sfx(die_sfx, -5.0) 
+	
 	var death_tween = get_tree().create_tween()
 	
-	for i in range(6):
+	# Visual flicker effect
+	for i in range(5):
 		death_tween.tween_property(sprite, "modulate:a", 0.0, 0.1)
 		death_tween.tween_property(sprite, "modulate:a", 1.0, 0.1)
 	
-	death_tween.tween_property(sprite, "modulate:a", 0.0, 0.3)
-	death_tween.parallel().tween_property(sprite, "scale", Vector2(0.5, 0.5), 1.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	# Shrink and fade
+	death_tween.tween_property(sprite, "modulate:a", 0.0, 0.2)
+	death_tween.parallel().tween_property(sprite, "scale", Vector2(0.3, 0.3), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	
+	# 2. Wait for this tween to finish before restarting the game
 	death_tween.finished.connect(_on_death_animation_finished)
 
 func _on_death_animation_finished() -> void:
-	print("Death animation completed!")
+	# 3. Restart the current scene
+	print("Death animation completed! Restarting...")	
+	SceneManager.change_scene(get_tree().current_scene.scene_file_path, { "pattern": "squares" })
+
+#func _on_death_animation_finished() -> void:
+	#print("Death animation completed!")
 
 # PUBLIC METHOD: Call this from outside to trigger death
 func die() -> void:

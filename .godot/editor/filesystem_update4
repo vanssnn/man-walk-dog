@@ -1,8 +1,12 @@
-res://rooms/level1.tscn
+res://man/man_cb.tscn
+res://audio/audio_manager.gd
+res://components/platformer_component.gd
 res://rooms/menu.tscn
+res://rooms/level1.tscn
 res://rooms/level2.tscn
 res://rooms/level3.tscn
 res://rooms/level4.tscn
 res://dog/dog_rb.tscn
 res://rooms/level5.tscn
-res://man/man_cb.tscn
+res://default_bus_layout.tres
+res://components/health_component.gd

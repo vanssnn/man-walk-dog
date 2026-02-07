@@ -10,6 +10,8 @@ func _ready() -> void:
 	health = MAX_HEALTH
 
 func take_damage():
+	#if is_dead: return
+	
 	health -= 1
 	
 	if health <= 0:

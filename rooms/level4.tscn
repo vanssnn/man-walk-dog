@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="4_0w1qf"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_frpev"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_3qldx"]
-[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://Hurtbox/hurtbox.tscn" id="7_h6ewg"]
+[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://hurtbox/hurtbox.tscn" id="7_h6ewg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_3jb3f")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpi3d6m0k5at8"]
+[gd_scene load_steps=7 format=3 uid="uid://bpi3d6m0k5at8"]
 
 [ext_resource type="Script" uid="uid://cgbea5q7xpgbo" path="res://flag/flag_cb.gd" id="1_mr0x5"]
+[ext_resource type="PackedScene" uid="uid://clsu1a2bis2na" path="res://components/health_component.tscn" id="2_jkval"]
 [ext_resource type="Texture2D" uid="uid://b31o4mkgrttqb" path="res://flag/flag.png" id="2_mr0x5"]
 [ext_resource type="PackedScene" uid="uid://dfn5ltolnk4sa" path="res://components/platformer_component.tscn" id="2_ocdhv"]
 
@@ -12,7 +13,10 @@ height = 32.0
 size = Vector2(34, 42)
 
 [node name="FlagCB" type="CharacterBody2D"]
+collision_mask = 7
 script = ExtResource("1_mr0x5")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_jkval")]
 
 [node name="PlatformerComponent" parent="." instance=ExtResource("2_ocdhv")]
 

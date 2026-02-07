@@ -6,4 +6,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 
 func start_game() -> void:
-	SceneManager.change_scene('res://rooms/level1.tscn', { "pattern": "scribbles" })
+	SceneManager.change_scene('res://rooms/level1.tscn', { "pattern": "squares" })

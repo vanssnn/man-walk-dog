@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://bfhi8cacgxrme"]
+[gd_scene load_steps=19 format=4 uid="uid://bfhi8cacgxrme"]
 
-[ext_resource type="Script" uid="uid://doj07yetjapp" path="res://rooms/level_test.gd" id="1_5lbgn"]
+[ext_resource type="Script" path="res://rooms/level_test.gd" id="1_5lbgn"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_nc086"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_ubom2"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="3_5lbgn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_ubom2"]
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="6_yl5lm"]
 [ext_resource type="PackedScene" uid="uid://6h2lfxd0lx6b" path="res://button/HoldButton.tscn" id="7_ubom2"]
+[ext_resource type="PackedScene" uid="uid://barm1abxw4etd" path="res://sawblade/SawPath.tscn" id="10_11174"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_nc086")
@@ -412,6 +413,13 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_o1gcv")
 
+[sub_resource type="Curve2D" id="Curve2D_11174"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 72, -4, 0, 0, 0, 0, 184, 9, 0, 0, 0, 0, 267, 11)
+}
+point_count = 3
+
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_5lbgn")
 
@@ -472,3 +480,13 @@ target_b = NodePath("../DogRB")
 [node name="Flag" parent="." instance=ExtResource("6_ubom2")]
 position = Vector2(568, 312)
 next_scene_string = "res://rooms/level2.tscn"
+
+[node name="SawPath" parent="." instance=ExtResource("10_11174")]
+position = Vector2(241, 156)
+curve = SubResource("Curve2D_11174")
+speed = 150.0
+
+[node name="SawFollower" parent="SawPath" index="0"]
+position = Vector2(72, -4)
+
+[editable path="SawPath"]

@@ -1,6 +1,6 @@
-res://rooms/menu.tscn
-res://rooms/level1.tscn
-res://rooms/level2.tscn
-res://rooms/level3.tscn
-res://rooms/level4.tscn
+res://components/platformer_component.tscn
 res://components/platformer_component.gd
+res://rooms/menu.tscn
+res://man/man_cb.tscn
+res://rooms/level_test.tscn
+res://dog/dog_cb.tscn

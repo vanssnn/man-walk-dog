@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dfn5ltolnk4sa" path="res://components/platformer_component.tscn" id="1_j5adr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3r1md"]
-radius = 7.0
-height = 22.0
+radius = 6.0
+height = 20.0
 
 [node name="DogCB" type="CharacterBody2D" groups=["dog"]]
 collision_mask = 7

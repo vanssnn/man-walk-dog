@@ -1,24 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvynvoh4ux5w0"]
 
 [ext_resource type="Script" uid="uid://dm6dg0cwrffc7" path="res://switch/switch.gd" id="1_umagw"]
-[ext_resource type="Texture2D" uid="uid://cjsuxq8ouda4m" path="res://button/Button.png" id="2_2xu16"]
+[ext_resource type="Texture2D" uid="uid://dbgqn0xnvghch" path="res://switch/switch.png" id="2_ql8yy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgfxf"]
-atlas = ExtResource("2_2xu16")
-region = Rect2(0, 0, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxdan"]
+atlas = ExtResource("2_ql8yy")
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_stvn5"]
-atlas = ExtResource("2_2xu16")
-region = Rect2(32, 0, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi7mq"]
+atlas = ExtResource("2_ql8yy")
+region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7hn7e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tgfxf")
+"texture": SubResource("AtlasTexture_yxdan")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_stvn5")
+"texture": SubResource("AtlasTexture_fi7mq")
 }],
 "loop": true,
 "name": &"default",
@@ -26,12 +26,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xu16"]
+size = Vector2(64, 48)
 
 [node name="Switch" type="Area2D"]
 script = ExtResource("1_umagw")
 
 [node name="Switch" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7hn7e")
+frame_progress = 0.320897
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2xu16")

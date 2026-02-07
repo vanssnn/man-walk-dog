@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://6h2lfxd0lx6b"]
+
+[ext_resource type="Script" uid="uid://d0ndqhnosti4c" path="res://button/hold_button.gd" id="1_fquae"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nwpc3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_235xs"]
+
+[node name="HoldButton" type="Area2D"]
+script = ExtResource("1_fquae")
+
+[node name="HoldButton" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nwpc3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_235xs")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

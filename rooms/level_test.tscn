@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://bfhi8cacgxrme"]
+[gd_scene load_steps=16 format=4 uid="uid://bfhi8cacgxrme"]
 
+[ext_resource type="Script" uid="uid://doj07yetjapp" path="res://rooms/level_test.gd" id="1_5lbgn"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_nc086"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_ubom2"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="3_5lbgn"]
 [ext_resource type="PackedScene" uid="uid://bt3lybvmvk3rj" path="res://man/man_cb.tscn" id="3_nc086"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_ubom2"]
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="6_yl5lm"]
+[ext_resource type="PackedScene" uid="uid://6h2lfxd0lx6b" path="res://button/HoldButton.tscn" id="7_ubom2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_nc086")
@@ -410,6 +412,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_o1gcv")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_5lbgn")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
@@ -459,3 +462,9 @@ target_b = NodePath("../DogRB")
 [node name="Flag" parent="." instance=ExtResource("6_ubom2")]
 position = Vector2(568, 312)
 next_scene_string = "res://rooms/level2.tscn"
+
+[node name="HoldButton" parent="." instance=ExtResource("7_ubom2")]
+position = Vector2(159, 281)
+
+[node name="HoldButton2" parent="." instance=ExtResource("7_ubom2")]
+position = Vector2(226, 312)

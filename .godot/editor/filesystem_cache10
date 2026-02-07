@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1770470633
+::res://::1770474181
 icon.svg::CompressedTexture2D/CompressedTexture2D::7816271066602428598::1770448397::1770448685::1::::<><><>0<>0<>cdf7a7888b9f0bc9786aa619df658b63<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1770448397::0::1::::<><><>0<>0<><>::
 ::res://addons/::1770448397
@@ -25,45 +25,46 @@ scribbles.png::CompressedTexture2D/CompressedTexture2D::2812175283927716421::177
 squares.png::CompressedTexture2D/CompressedTexture2D::4484147373352580222::1770448397::1770448685::1::::<><><>0<>0<>c4a9833846430f54ada5431e93bb2f5e<>res://.godot/imported/squares.png-a8c8144d665aa3e0d712474304ad6e6f.s3tc.ctex::
 vertical.png::CompressedTexture2D/CompressedTexture2D::6321667921096867211::1770448397::1770448685::1::::<><><>0<>0<>c03c0a83a889f603bb412cb3a6dbf923<>res://.godot/imported/vertical.png-5d237b9ea3cdd66e653ef032da0bd507.s3tc.ctex::
 ::res://animations/::1770450100
-::res://components/::1770470633
-health_component.gd::GDScript::-1::1770470633::0::1::::HealthComponent<>Node2D<><>0<>0<><>::
-health_component.tscn::PackedScene::-1::1770470633::0::1::::<><><>0<>0<><>::
-platformer_component.gd::GDScript::6967368309757869605::1770470633::0::1::::PlatformerComponent<>Node2D<><>0<>0<><>::
-platformer_component.tscn::PackedScene::7538885353676693720::1770470175::0::1::::<><><>0<>0<><>::uid://c6jbskcenvsoj::::res://components/platformer_component.gd
-::res://dog/::1770470633
+::res://components/::1770474101
+health_component.gd::GDScript/GDScript::1106132742887567766::1770471239::0::1::::HealthComponent<>Node2D<><>0<>0<><>::
+health_component.tscn::PackedScene/PackedScene::5583338259241075350::1770471239::0::1::::<><><>0<>0<><>::uid://p023yo2m27a5::::res://components/health_component.gd
+platformer_component.gd::GDScript/GDScript::6967368309757869605::1770471239::0::1::::PlatformerComponent<>Node2D<><>0<>0<><>::
+platformer_component.tscn::PackedScene::7538885353676693720::1770474101::0::1::::<><><>0<>0<><>::uid://c6jbskcenvsoj::::res://components/platformer_component.gd
+::res://dog/::1770474101
 dog.png::CompressedTexture2D/CompressedTexture2D::6862779332967420286::1770448397::1770448685::1::::<><><>0<>0<>68662f610560ed42e9949531c404f030<>res://.godot/imported/dog.png-4685f0e56125f9072193f5cbe6dc9765.ctex::
-dog_cb.tscn::PackedScene::7016574317465852575::1770470633::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
-dog_rb.tscn::PackedScene/PackedScene::4671158472516582656::1770470633::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png
-::res://flag/::1770470633
-flag.gd::GDScript/GDScript::4867829571947740062::1770470633::0::1::::<>Area2D<><>0<>0<><>::
+dog_cb.tscn::PackedScene::7016574317465852575::1770474101::0::1::::<><><>0<>0<><>::uid://clsu1a2bis2na::::res://components/health_component.tscn<>uid://c41m8cy2i53yo::::res://dog/dog.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
+dog_rb.tscn::PackedScene/PackedScene::4671158472516582656::1770471239::0::1::::<><><>0<>0<><>::uid://c41m8cy2i53yo::::res://dog/dog.png<>uid://clsu1a2bis2na::::res://components/health_component.tscn
+::res://flag/::1770471239
+flag.gd::GDScript/GDScript::4867829571947740062::1770471239::0::1::::<>Area2D<><>0<>0<><>::
 flag.png::CompressedTexture2D/CompressedTexture2D::4406284599109879893::1770448397::1770448685::1::::<><><>0<>0<>2f92f0dc1e73bbbf75785b3b8c6575f4<>res://.godot/imported/flag.png-c72d212550494c8b3c599a85160fb46a.ctex::
 flag.tscn::PackedScene/PackedScene::5497111272975688652::1770448397::0::1::::<><><>0<>0<><>::uid://cbmapa1rvvida::::res://flag/flag.gd<>uid://b31o4mkgrttqb::::res://flag/flag.png
-flag_cb.gd::GDScript/GDScript::5196283276842162864::1770470633::0::1::::<>CharacterBody2D<><>0<>0<><>::
-flag_cb.tscn::PackedScene/PackedScene::3457475441387176919::1770470633::0::1::::<><><>0<>0<><>::uid://cgbea5q7xpgbo::::res://flag/flag_cb.gd<>uid://b31o4mkgrttqb::::res://flag/flag.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
+flag_cb.gd::GDScript/GDScript::5196283276842162864::1770471239::0::1::::<>CharacterBody2D<><>0<>0<><>::
+flag_cb.tscn::PackedScene/PackedScene::3457475441387176919::1770471239::0::1::::<><><>0<>0<><>::uid://cgbea5q7xpgbo::::res://flag/flag_cb.gd<>uid://clsu1a2bis2na::::res://components/health_component.tscn<>uid://b31o4mkgrttqb::::res://flag/flag.png<>uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn
 ::res://fonts/::1770448685
 KenPixel Mini Square.ttf::FontFile/FontFile::2375895979927888836::1770448397::1770448685::1::::<><><>0<>0<>b27d2b738a4a7307db7d953ea2c972fb<>res://.godot/imported/KenPixel Mini Square.ttf-4bb5dc313c6bc02cc68097e3c6637ca8.fontdata::
 KenPixel Mini.ttf::FontFile/FontFile::815124958452802336::1770448397::1770448685::1::::<><><>0<>0<>234872641f2668c0411130fb00d37238<>res://.godot/imported/KenPixel Mini.ttf-bc1b938d67e67b59cd2533658cc150e1.fontdata::
 ::res://ground/::1770448685
 tileset_ground.png::CompressedTexture2D/CompressedTexture2D::1420889691035219903::1770448397::1770448685::1::::<><><>0<>0<>6565e55e8e378b85e07dc48bf41f9dea<>res://.godot/imported/tileset_ground.png-7059f14d4807851b60bcf5ac11365e98.ctex::
 tileset_ground.tres::TileSet/TileSet::5915440137343251374::1770448397::0::1::::<><><>0<>0<><>::uid://uij30seenx64::::res://ground/tileset_ground.png
-::res://Hurtbox/::1770470633
-hurtbox.gd::GDScript::8555572528329464601::1770470633::0::1::::<>Area2D<><>0<>0<><>::
-hurtbox.tscn::PackedScene::5497789750296809334::1770470633::0::1::::<><><>0<>0<><>::uid://dt5nbafx2tqwf::::res://Hurtbox/hurtbox.gd
-::res://man/::1770470633
+::res://Hurtbox/::1770472389
+hurtbox.gd::GDScript::8555572528329464601::1770472323::0::1::::<>Area2D<><>0<>0<><>::
+hurtbox.tscn::PackedScene::5497789750296809334::1770472389::0::1::::<><><>0<>0<><>::uid://dt5nbafx2tqwf::::res://Hurtbox/hurtbox.gd
+::res://man/::1770474101
 man.png::CompressedTexture2D/CompressedTexture2D::557140999430961604::1770448397::1770448685::1::::<><><>0<>0<>fc7f1226d646d9ebc613e4d6230fb5b6<>res://.godot/imported/man.png-4639e04193b354a591207a0a17cbcbfa.ctex::
-man_cb.tscn::PackedScene::3778522121441495707::1770470633::0::1::::<><><>0<>0<><>::uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn<>uid://h65bbw8cw0ou::::res://man/man.png
-man_rb.tscn::PackedScene/PackedScene::7835664000334708129::1770470633::0::1::::<><><>0<>0<><>::uid://h65bbw8cw0ou::::res://man/man.png
-::res://rooms/::1770470633
-level1.tscn::PackedScene::8364610890532625604::1770470633::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn
-level2.tscn::PackedScene::4460233071112216520::1770470633::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://c6747oxcun7o2::::res://dog/dog_cb.tscn
-level3.tscn::PackedScene::498145164082555606::1770470633::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://bpi3d6m0k5at8::::res://flag/flag_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
-level4.tscn::PackedScene::-1::1770470633::0::1::::<><><>0<>0<><>::
-level5.tscn::PackedScene::-1::1770470633::0::1::::<><><>0<>0<><>::
-menu.gd::GDScript::2474104471201991547::1770470633::0::1::::<>Control<><>0<>0<><>::
-menu.tscn::PackedScene::8926445041012170261::1770470299::0::1::::<><><>0<>0<><>::uid://bbiqey46hxhxj::::res://rooms/menu.gd
+man_cb.tscn::PackedScene::3778522121441495707::1770474101::0::1::::<><><>0<>0<><>::uid://dfn5ltolnk4sa::::res://components/platformer_component.tscn<>uid://clsu1a2bis2na::::res://components/health_component.tscn<>uid://h65bbw8cw0ou::::res://man/man.png
+man_rb.tscn::PackedScene/PackedScene::7835664000334708129::1770471239::0::1::::<><><>0<>0<><>::uid://clsu1a2bis2na::::res://components/health_component.tscn<>uid://h65bbw8cw0ou::::res://man/man.png
+::res://rooms/::1770474150
+level1.tscn::PackedScene::8364610890532625604::1770474101::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://d4ded3u851bgw::::res://sawblade/sawblade.tscn
+level2.tscn::PackedScene::4460233071112216520::1770474101::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://c6747oxcun7o2::::res://dog/dog_cb.tscn
+level3.tscn::PackedScene::498145164082555606::1770474101::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://djvwig6kb1fx6::::res://man/man_rb.tscn<>uid://bpi3d6m0k5at8::::res://flag/flag_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
+level4.tscn::PackedScene::3753122422360501022::1770474150::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://cklf182okntba::::res://Hurtbox/hurtbox.tscn
+level5.tscn::PackedScene::207407508471261831::1770474101::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn
+level_test.tscn::PackedScene::2752360318449187896::1770474101::0::1::::<><><>0<>0<><>::uid://lu38viwgn2fc::::res://fonts/KenPixel Mini.ttf<>uid://uij30seenx64::::res://ground/tileset_ground.png<>uid://d0xb7r6dxcn25::::res://rope/rope.tscn<>uid://bt3lybvmvk3rj::::res://man/man_cb.tscn<>uid://ckk3vcf6o421e::::res://flag/flag.tscn<>uid://b7s0kd88ul45y::::res://dog/dog_rb.tscn
+menu.gd::GDScript/GDScript::2474104471201991547::1770471732::0::1::::<>Control<><>0<>0<><>::
+menu.tscn::PackedScene::8926445041012170261::1770474101::0::1::::<><><>0<>0<><>::uid://bbiqey46hxhxj::::res://rooms/menu.gd<>uid://835wotskv3ee::::res://fonts/KenPixel Mini Square.ttf
 ::res://rope/::1770448397
 rope.gd::GDScript/GDScript::6460594865262429570::1770448397::0::1::::<>Node2D<><>0<>0<><>::
 rope.tscn::PackedScene/PackedScene::8961582633724236680::1770448397::0::1::::<><><>0<>0<><>::uid://cybtb2416kajq::::res://rope/rope.gd
-::res://sawblade/::1770470633
-sawblade.png::CompressedTexture2D::1335281396516762861::1770470633::1770470655::1::::<><><>0<>0<>0802b717481347e04e92b03c4e5bb708<>res://.godot/imported/sawblade.png-04a17a62f4d58457a88b4245d2f5cb51.ctex::
-sawblade.tscn::PackedScene::9201181378287576886::1770470633::0::1::::<><><>0<>0<><>::uid://ta25ijpasw4l::::res://sawblade/sawblade.png<>uid://cklf182okntba::::res://Hurtbox/hurtbox.tscn
+::res://sawblade/::1770474101
+sawblade.png::CompressedTexture2D/CompressedTexture2D::1335281396516762861::1770471239::1770471239::1::::<><><>0<>0<>0802b717481347e04e92b03c4e5bb708<>res://.godot/imported/sawblade.png-04a17a62f4d58457a88b4245d2f5cb51.ctex::
+sawblade.tscn::PackedScene::9201181378287576886::1770474101::0::1::::<><><>0<>0<><>::uid://ta25ijpasw4l::::res://sawblade/sawblade.png<>uid://cklf182okntba::::res://Hurtbox/hurtbox.tscn

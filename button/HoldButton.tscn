@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://6h2lfxd0lx6b"]
+
+[ext_resource type="Script" uid="uid://d0ndqhnosti4c" path="res://button/hold_button.gd" id="1_fquae"]
+[ext_resource type="Texture2D" uid="uid://cjsuxq8ouda4m" path="res://button/Button.png" id="2_nwpc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_235xs"]
+atlas = ExtResource("2_nwpc3")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgrts"]
+atlas = ExtResource("2_nwpc3")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nwpc3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_235xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgrts")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_235xs"]
+
+[node name="HoldButton" type="Area2D"]
+script = ExtResource("1_fquae")
+
+[node name="HoldButton" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nwpc3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_235xs")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

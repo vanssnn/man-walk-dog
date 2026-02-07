@@ -4,6 +4,7 @@ class_name PlatformerComponent
 @onready var parent: CharacterBody2D = $".."
 @export var is_active: bool = true
 @onready var sprite: Sprite2D = null
+@onready var coyote_timer: Timer = $CoyoteTimer
 
 var gravity_dir: int = 1
 
@@ -15,6 +16,9 @@ enum MovementMode {
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
+
+# Coyote
+var can_jump: bool = true
 
 # Animation state tracking
 var is_jumping: bool = false
@@ -62,10 +66,18 @@ func normal_jump_mode(delta: float) -> void:
 		parent.velocity += parent.get_gravity() * delta
 	
 	if is_active:
-		if Input.is_action_just_pressed("move_up") and parent.is_on_floor():
+		if Input.is_action_just_pressed("move_up") and can_jump:
+			can_jump = false
 			parent.velocity.y = JUMP_VELOCITY
 			is_jumping = true
 			start_jump_animation()
+		
+		if can_jump == false and parent.is_on_floor() and parent.velocity.y >=0:
+			can_jump = true
+			
+		if (parent.is_on_floor() == false) and can_jump and coyote_timer.is_stopped():
+			coyote_timer.start()
+		
 		horizontal_movement()
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, 0, SPEED)
@@ -233,3 +245,7 @@ func respawn() -> void:
 	parent.velocity = Vector2.ZERO
 	gravity_dir = 1
 	parent.rotation_degrees = 0
+
+
+func _on_coyote_timer_timeout() -> void:
+	can_jump = false

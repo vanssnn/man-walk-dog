@@ -4,3 +4,8 @@
 
 [node name="PlatformerComponent" type="Node2D"]
 script = ExtResource("1_o2j65")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]

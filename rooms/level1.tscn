@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://drf46ixp2hdbo"]
+[gd_scene load_steps=15 format=4 uid="uid://drf46ixp2hdbo"]
 
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_ojvd3"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_lio4b"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="4_mpfpt"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_pc6ne"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_mpfpt"]
+[ext_resource type="PackedScene" uid="uid://d4ded3u851bgw" path="res://sawblade/sawblade.tscn" id="7_pc6ne"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_ojvd3")
@@ -459,3 +460,6 @@ target_b = NodePath("../DogRB")
 [node name="Flag" parent="." instance=ExtResource("6_mpfpt")]
 position = Vector2(585, 84)
 next_scene_string = "res://rooms/level2.tscn"
+
+[node name="Sawblade" parent="." instance=ExtResource("7_pc6ne")]
+position = Vector2(233, 243)

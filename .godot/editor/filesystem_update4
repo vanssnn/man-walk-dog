@@ -16,3 +16,5 @@ res://dog/dog_rb.tscn
 res://flag/flag_cb.tscn
 res://man/man_rb.tscn
 res://man/man_cb.tscn
+res://rooms/level1.tscn
+res://rooms/level3.tscn

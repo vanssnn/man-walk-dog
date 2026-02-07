@@ -19,7 +19,6 @@ enum MovementMode {
 # Animation state tracking
 var is_jumping: bool = false
 var is_walking: bool = false
-var is_dead: bool = false
 var was_on_floor: bool = false  # Track previous frame's floor state
 
 func _ready():
@@ -33,9 +32,8 @@ func _physics_process(delta: float) -> void:
 		var health := parent.get_node("HealthComponent")
 		if health.is_dead:
 			is_active = false
+			return
 		
-	if is_dead:
-		return
 		
 	match movement_mode:
 		MovementMode.NORMAL_JUMP:
@@ -200,9 +198,8 @@ func start_flip_animations() -> void:
 
 # DEATH ANIMATION (Flicker)
 func start_death_animation() -> void:
-	if sprite == null or is_dead:
+	if sprite == null:
 		return
-	is_dead = true
 	is_active = false
 	parent.velocity = Vector2.ZERO
 	
@@ -225,7 +222,6 @@ func die() -> void:
 
 # PUBLIC METHOD: Respawn/Reset the character
 func respawn() -> void:
-	is_dead = false
 	is_active = true
 	is_jumping = false
 	is_walking = false

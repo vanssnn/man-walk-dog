@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0gbil8ilc4t2"]
+
+[ext_resource type="Script" uid="uid://bbiqey46hxhxj" path="res://rooms/menu.gd" id="1_iqh05"]
+[ext_resource type="FontFile" uid="uid://835wotskv3ee" path="res://fonts/KenPixel Mini Square.ttf" id="2_slw2s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
+font = ExtResource("2_slw2s")
+font_size = 60
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iqh05")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "MAN WALK DOG"
+label_settings = SubResource("LabelSettings_cpwjf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -37.5
+offset_right = 71.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Anywhere to Start"
+label_settings = SubResource("LabelSettings_cpwjf")
+horizontal_alignment = 1
+vertical_alignment = 1

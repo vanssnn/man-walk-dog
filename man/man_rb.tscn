@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://djvwig6kb1fx6"]
+
+[ext_resource type="Texture2D" uid="uid://h65bbw8cw0ou" path="res://man/man.png" id="2_hk8xo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lrxqs"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hajs2"]
+radius = 11.0
+height = 26.0
+
+[node name="ManRB" type="RigidBody2D" groups=["man"]]
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_lrxqs")
+
+[node name="Man" type="Sprite2D" parent="."]
+texture = ExtResource("2_hk8xo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_hajs2")

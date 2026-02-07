@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0xb7r6dxcn25"]
+
+[ext_resource type="Script" uid="uid://cybtb2416kajq" path="res://rope/rope.gd" id="1_macth"]
+
+[node name="Rope" type="Node2D"]
+script = ExtResource("1_macth")
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+node_a = NodePath("../../ManCB")
+node_b = NodePath("../../DogRB")
+length = 1.0
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(48, 0, 0, 0)
+width = 2.0

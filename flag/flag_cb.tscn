@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpi3d6m0k5at8"]
+
+[ext_resource type="Script" uid="uid://cgbea5q7xpgbo" path="res://flag/flag_cb.gd" id="1_mr0x5"]
+[ext_resource type="Texture2D" uid="uid://b31o4mkgrttqb" path="res://flag/flag.png" id="2_mr0x5"]
+[ext_resource type="PackedScene" uid="uid://dfn5ltolnk4sa" path="res://components/platformer_component.tscn" id="2_ocdhv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkval"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hyso"]
+size = Vector2(34, 42)
+
+[node name="FlagCB" type="CharacterBody2D"]
+script = ExtResource("1_mr0x5")
+
+[node name="PlatformerComponent" parent="." instance=ExtResource("2_ocdhv")]
+
+[node name="Flag" type="Sprite2D" parent="."]
+texture = ExtResource("2_mr0x5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jkval")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4hyso")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

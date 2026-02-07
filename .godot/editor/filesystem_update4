@@ -1,8 +1,0 @@
-res://rooms/menu.tscn
-res://components/platformer_component.tscn
-res://man/man_cb.tscn
-res://rooms/level_test.tscn
-res://dog/dog_cb.tscn
-res://components/platformer_component.gd
-res://flag/flag.tscn
-res://flag/flag_cb.tscn

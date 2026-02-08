@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d4ded3u851bgw"]
 
 [ext_resource type="Texture2D" uid="uid://ta25ijpasw4l" path="res://sawblade/sawblade.png" id="1_04ybw"]
-[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://hurtbox/hurtbox.tscn" id="1_55xj7"]
+[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://Hurtbox/hurtbox.tscn" id="1_55xj7"]
 
 [sub_resource type="Animation" id="Animation_7hjy0"]
 length = 0.001

@@ -459,7 +459,7 @@ target_b = NodePath("../ManRB2")
 
 [node name="Flag" parent="." instance=ExtResource("5_1q0xa")]
 position = Vector2(592, 72)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/level8.tscn"
 
 [node name="ManRB" parent="." instance=ExtResource("6_ndui7")]
 position = Vector2(88, 304)

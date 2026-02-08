@@ -1,11 +1,69 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0gbil8ilc4t2"]
+[gd_scene load_steps=6 format=3 uid="uid://d0gbil8ilc4t2"]
 
 [ext_resource type="Script" uid="uid://bbiqey46hxhxj" path="res://rooms/menu.gd" id="1_iqh05"]
-[ext_resource type="FontFile" uid="uid://835wotskv3ee" path="res://fonts/KenPixel Mini Square.ttf" id="2_slw2s"]
+[ext_resource type="Texture2D" uid="uid://ck4iwbxed7xsa" path="res://rooms/Banner.png" id="2_iqh05"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
-font = ExtResource("2_slw2s")
-font_size = 60
+[sub_resource type="Animation" id="Animation_slw2s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_iqh05"]
+resource_name = "logo"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(0.615572, 0.615572, 0.615572, 0.615572, 0.615572),
+"update": 0,
+"values": [Vector2(0.3, 0.3), Vector2(0.31, 0.31), Vector2(0.3, 0.3), Vector2(0.31, 0.31), Vector2(0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1, 2.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0174533, 0.0349066, -0.0157643]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cpwjf"]
+_data = {
+&"RESET": SubResource("Animation_slw2s"),
+&"logo": SubResource("Animation_iqh05")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,47 +74,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iqh05")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -37.5
-offset_bottom = 37.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "MAN WALK DOG"
-label_settings = SubResource("LabelSettings_cpwjf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -71.0
-offset_top = -37.5
-offset_right = 71.0
-offset_bottom = 37.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Press Anywhere to Start"
-label_settings = SubResource("LabelSettings_cpwjf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 223.0
-offset_right = 640.0
-offset_bottom = 263.0
+offset_top = 281.0
+offset_right = 639.0
+offset_bottom = 321.0
 bbcode_enabled = true
 text = "[font=res://fonts/KenPixel Mini Square.ttf][shake]Press anything to start...[/shake][font_size=20][/font_size][/font]"
 horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(305, 155)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_iqh05")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_cpwjf")
+}
+autoplay = "logo"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

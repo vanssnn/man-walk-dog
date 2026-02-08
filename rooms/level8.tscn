@@ -447,7 +447,7 @@ _data = {
 &"walk": SubResource("Animation_t6d5k")
 }
 
-[node name="Level7" type="Node2D"]
+[node name="Level8" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
@@ -510,6 +510,7 @@ position = Vector2(1944, 304)
 position = Vector2(-1216, 16)
 
 [node name="Sawblade4" parent="Obstacle/SawbladeWall" instance=ExtResource("7_t6d5k")]
+visible = false
 position = Vector2(-24, -40)
 
 [node name="Sawblade3" parent="Obstacle/SawbladeWall" instance=ExtResource("7_t6d5k")]
@@ -524,9 +525,6 @@ position = Vector2(-24, 32)
 [node name="SawbladeWall2" type="Node2D" parent="Obstacle"]
 position = Vector2(-1024, 16)
 
-[node name="Sawblade4" parent="Obstacle/SawbladeWall2" instance=ExtResource("7_t6d5k")]
-position = Vector2(-24, -40)
-
 [node name="Sawblade3" parent="Obstacle/SawbladeWall2" instance=ExtResource("7_t6d5k")]
 position = Vector2(-24, -16)
 
@@ -538,9 +536,6 @@ position = Vector2(-24, 32)
 
 [node name="SawbladeWall5" type="Node2D" parent="Obstacle"]
 position = Vector2(-448, 16)
-
-[node name="Sawblade4" parent="Obstacle/SawbladeWall5" instance=ExtResource("7_t6d5k")]
-position = Vector2(-24, -40)
 
 [node name="Sawblade3" parent="Obstacle/SawbladeWall5" instance=ExtResource("7_t6d5k")]
 position = Vector2(-24, -16)
@@ -563,9 +558,6 @@ position = Vector2(-24, -16)
 [node name="Sawblade2" parent="Obstacle/SawbladeWall4" instance=ExtResource("7_t6d5k")]
 position = Vector2(-24, 8)
 
-[node name="Sawblade" parent="Obstacle/SawbladeWall4" instance=ExtResource("7_t6d5k")]
-position = Vector2(-24, 32)
-
 [node name="SawbladeWall3" type="Node2D" parent="Obstacle"]
 position = Vector2(-832, -32)
 
@@ -577,9 +569,6 @@ position = Vector2(-24, -16)
 
 [node name="Sawblade2" parent="Obstacle/SawbladeWall3" instance=ExtResource("7_t6d5k")]
 position = Vector2(-24, 8)
-
-[node name="Sawblade" parent="Obstacle/SawbladeWall3" instance=ExtResource("7_t6d5k")]
-position = Vector2(-24, 32)
 
 [node name="SawbladeWall6" type="Node2D" parent="Obstacle"]
 position = Vector2(-256, 0)
@@ -595,22 +584,22 @@ position = Vector2(-72, 8)
 
 [node name="Flag" parent="Obstacle/FlagWall" instance=ExtResource("5_1i0yc")]
 position = Vector2(-16, -88)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/end_screen.tscn"
 
 [node name="Flag2" parent="Obstacle/FlagWall" instance=ExtResource("5_1i0yc")]
 position = Vector2(-16, -152)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/end_screen.tscn"
 
 [node name="Flag3" parent="Obstacle/FlagWall" instance=ExtResource("5_1i0yc")]
 position = Vector2(-16, 104)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/end_screen.tscn"
 
 [node name="Flag4" parent="Obstacle/FlagWall" instance=ExtResource("5_1i0yc")]
 position = Vector2(-16, 40)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/end_screen.tscn"
 
 [node name="Flag5" parent="Obstacle/FlagWall" instance=ExtResource("5_1i0yc")]
 position = Vector2(-16, -24)
-next_scene_string = "res://rooms/menu.tscn"
+next_scene_string = "res://rooms/end_screen.tscn"
 
 [editable path="DogCB"]

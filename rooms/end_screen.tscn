@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_qd5ik")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_top = 197.0
 offset_right = 639.0
 offset_bottom = 237.0
@@ -20,6 +21,7 @@ text = "[font=res://fonts/KenPixel Mini Square.ttf][shake]Press anything to go t
 horizontal_alignment = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_top = 137.0
 offset_right = 639.0
 offset_bottom = 195.0

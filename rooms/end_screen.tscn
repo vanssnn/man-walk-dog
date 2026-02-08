@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://y07d0xmpghtt"]
+
+[ext_resource type="Script" uid="uid://bmnl2muy46gpj" path="res://rooms/end_screen.gd" id="1_qd5ik"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qd5ik")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 197.0
+offset_right = 639.0
+offset_bottom = 237.0
+bbcode_enabled = true
+text = "[font=res://fonts/KenPixel Mini Square.ttf][shake]Press anything to go to menu...[/shake][font_size=20][/font_size][/font]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_top = 137.0
+offset_right = 639.0
+offset_bottom = 195.0
+bbcode_enabled = true
+text = "[font=res://fonts/KenPixel Mini Square.ttf][font_size=40][shake]Thank you for playing![/shake][/font_size][/font]"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

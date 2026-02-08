@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_8hmr1"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_4nqgw"]
 [ext_resource type="PackedScene" uid="uid://d4ded3u851bgw" path="res://sawblade/sawblade.tscn" id="7_tho03"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="8_34frc"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="8_34frc"]
 [ext_resource type="PackedScene" uid="uid://dho4xvtf40n55" path="res://door/door.tscn" id="10_8hmr1"]
-[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://Hurtbox/hurtbox.tscn" id="11_4nqgw"]
+[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://hurtbox/hurtbox.tscn" id="11_4nqgw"]
 [ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="12_bnk1k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]

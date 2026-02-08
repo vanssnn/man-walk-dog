@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=4 uid="uid://btqbm36jgnmnm"]
 
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_3jb3f"]
-[ext_resource type="Script" path="res://rooms/level4.gd" id="1_frpev"]
+[ext_resource type="Script" uid="uid://dbe1by1x4vp2j" path="res://rooms/level4.gd" id="1_frpev"]
 [ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="2_3qldx"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_h6ewg"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_frpev"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_3qldx"]
 [ext_resource type="PackedScene" uid="uid://djvwig6kb1fx6" path="res://man/man_rb.tscn" id="6_rrn8i"]
 [ext_resource type="PackedScene" uid="uid://c6747oxcun7o2" path="res://dog/dog_cb.tscn" id="7_fawge"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="8_i7xvi"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="8_i7xvi"]
 [ext_resource type="PackedScene" uid="uid://d4ded3u851bgw" path="res://sawblade/sawblade.tscn" id="9_dulfq"]
 [ext_resource type="PackedScene" uid="uid://dho4xvtf40n55" path="res://door/door.tscn" id="10_ugkxa"]
 

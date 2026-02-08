@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://b4stnfn7e70gy"]
 
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_3qb4c"]
-[ext_resource type="Script" path="res://rooms/level2.gd" id="1_ky4oi"]
+[ext_resource type="Script" uid="uid://doqphdah4dgdb" path="res://rooms/level2.gd" id="1_ky4oi"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_lfvxd"]
 [ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="2_pyfhn"]
 [ext_resource type="PackedScene" uid="uid://bt3lybvmvk3rj" path="res://man/man_cb.tscn" id="5_dapp3"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="6_ccm8q"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_dapp3"]
 [ext_resource type="PackedScene" uid="uid://d4ded3u851bgw" path="res://sawblade/sawblade.tscn" id="8_ia30o"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="9_v4tge"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="9_v4tge"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_3qb4c")

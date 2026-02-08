@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://xsxi88uglncc"]
+[gd_scene load_steps=19 format=4 uid="uid://hdkm4b06jbus"]
 
 [ext_resource type="Script" uid="uid://7yfgm10dahno" path="res://rooms/level_3.gd" id="1_4veg3"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_5k6l4"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="6_cnf52"]
 [ext_resource type="PackedScene" uid="uid://dho4xvtf40n55" path="res://door/door.tscn" id="7_cnf52"]
 [ext_resource type="PackedScene" uid="uid://6h2lfxd0lx6b" path="res://button/HoldButton.tscn" id="8_af50k"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="9_dcm78"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="9_dcm78"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_5k6l4")

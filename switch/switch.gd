@@ -6,6 +6,7 @@ signal toggled(is_on: bool)
 @onready var sprite: AnimatedSprite2D = $Switch
 @onready var cooldown: Timer = $Timer
 
+@export var switch_sfx: AudioStream = preload("res://audio/sfx/switch_sfx.wav")
 @export var cooldown_time := 2
 
 var can_toggle := true
@@ -37,6 +38,8 @@ func _on_body_entered(body: Node2D) -> void:
 	_toggle()
 
 func _toggle():
+	if switch_sfx:
+		AudioManager.play_sfx(switch_sfx, -10.0)
 	can_toggle = false
 	is_on = !is_on
 	sprite.frame = 1 if is_on else 0

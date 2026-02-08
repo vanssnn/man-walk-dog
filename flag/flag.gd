@@ -2,10 +2,13 @@ extends Area2D
 
 @onready var flag: Sprite2D = $Flag
 @export var next_scene_string: String
+@export var flag_sfx: AudioStream = preload("res://audio/sfx/sound_flag_win.wav")
 
 var tween: Tween = null
 
 func _on_body_entered(body: Node2D) -> void:
+	if flag_sfx:
+		AudioManager.play_sfx(flag_sfx, -10.0)
 	if body.is_in_group("dog") or body.is_in_group("man"):
 		SceneManager.change_scene(next_scene_string, { "pattern": "squares" })
 

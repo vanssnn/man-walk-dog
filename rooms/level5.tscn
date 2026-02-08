@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c7p8a5n5bc44"]
+[gd_scene load_steps=15 format=4 uid="uid://c7p8a5n5bc44"]
 
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_sjm0p"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_tho03"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="4_c0l80"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_8hmr1"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_4nqgw"]
+[ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="7_tho03"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_sjm0p")
@@ -462,5 +463,7 @@ target_b = NodePath("../DogRB")
 [node name="Flag" parent="." instance=ExtResource("6_4nqgw")]
 position = Vector2(585, 84)
 next_scene_string = "res://rooms/level6.tscn"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_tho03")]
 
 [editable path="ManCB"]

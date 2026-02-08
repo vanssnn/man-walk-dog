@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=4 uid="uid://bfhi8cacgxrme"]
 
-[ext_resource type="Script" uid="uid://doj07yetjapp" path="res://rooms/level_test.gd" id="1_5lbgn"]
+[ext_resource type="Script" path="res://rooms/level_test.gd" id="1_5lbgn"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_nc086"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_ubom2"]
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="3_5lbgn"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="3_b4ftt"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="3_b4ftt"]
 [ext_resource type="PackedScene" uid="uid://bt3lybvmvk3rj" path="res://man/man_cb.tscn" id="3_nc086"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_ubom2"]
 [ext_resource type="PackedScene" uid="uid://b7s0kd88ul45y" path="res://dog/dog_rb.tscn" id="6_yl5lm"]

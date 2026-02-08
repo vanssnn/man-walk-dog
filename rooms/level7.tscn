@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dhc2y4vl70ema"]
+[gd_scene load_steps=15 format=4 uid="uid://dhc2y4vl70ema"]
 
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_rvmvp"]
 [ext_resource type="Texture2D" uid="uid://uij30seenx64" path="res://ground/tileset_ground.png" id="2_1rhrq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="4_6k6go"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="5_1q0xa"]
 [ext_resource type="PackedScene" uid="uid://djvwig6kb1fx6" path="res://man/man_rb.tscn" id="6_ndui7"]
+[ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="7_1rhrq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_rvmvp")
@@ -466,3 +467,5 @@ position = Vector2(88, 304)
 
 [node name="ManRB2" parent="." instance=ExtResource("6_ndui7")]
 position = Vector2(48, 304)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_1rhrq")]

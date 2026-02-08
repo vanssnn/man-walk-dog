@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c7p8a5n5bc44"]
+[gd_scene load_steps=18 format=4 uid="uid://c7p8a5n5bc44"]
 
 [ext_resource type="Script" path="res://rooms/level_5.gd" id="1_c0l80"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_sjm0p"]
@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://d0xb7r6dxcn25" path="res://rope/rope.tscn" id="5_8hmr1"]
 [ext_resource type="PackedScene" uid="uid://ckk3vcf6o421e" path="res://flag/flag.tscn" id="6_4nqgw"]
 [ext_resource type="PackedScene" uid="uid://d4ded3u851bgw" path="res://sawblade/sawblade.tscn" id="7_tho03"]
-[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/switch.tscn" id="8_34frc"]
+[ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="8_34frc"]
 [ext_resource type="PackedScene" uid="uid://dho4xvtf40n55" path="res://door/door.tscn" id="10_8hmr1"]
-[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://hurtbox/hurtbox.tscn" id="11_4nqgw"]
+[ext_resource type="PackedScene" uid="uid://cklf182okntba" path="res://Hurtbox/hurtbox.tscn" id="11_4nqgw"]
+[ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="12_bnk1k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_sjm0p")
@@ -473,5 +474,7 @@ scale = Vector2(40, 1)
 [node name="Hurtbox2" parent="." instance=ExtResource("11_4nqgw")]
 position = Vector2(328, 456)
 scale = Vector2(40, 1)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("12_bnk1k")]
 
 [editable path="ManCB"]

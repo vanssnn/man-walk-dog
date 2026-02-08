@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cs3q83k4m3uvr"]
+[gd_scene load_steps=20 format=4 uid="uid://cs3q83k4m3uvr"]
 
 [ext_resource type="Script" uid="uid://bhjpefaa6uctm" path="res://rooms/level6.gd" id="1_dmvh8"]
 [ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_nj3al"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://barm1abxw4etd" path="res://sawblade/SawPath.tscn" id="9_hjtg6"]
 [ext_resource type="PackedScene" uid="uid://cvynvoh4ux5w0" path="res://switch/Switch.tscn" id="9_i61wa"]
 [ext_resource type="PackedScene" uid="uid://6h2lfxd0lx6b" path="res://button/HoldButton.tscn" id="12_f72ll"]
+[ext_resource type="PackedScene" uid="uid://bh4auix7utqds" path="res://background/background-slow-stars.tscn" id="13_ktyig"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpwjf"]
 font = ExtResource("1_nj3al")
@@ -507,5 +508,7 @@ type = 1
 [node name="ButtonDoor1" parent="." instance=ExtResource("12_f72ll")]
 position = Vector2(120, 224)
 type = 2
+
+[node name="CanvasLayer" parent="." instance=ExtResource("13_ktyig")]
 
 [editable path="ManCB"]

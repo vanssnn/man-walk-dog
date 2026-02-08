@@ -22,7 +22,7 @@ func take_damage():
 		# 1. Play the Game Over SFX
 		# We use AudioManager (the Autoload) so it survives the player being disabled
 		if die_sfx:
-			AudioManager.play_sfx(die_sfx, -5.0) 
+			AudioManager.play_sfx(die_sfx, -10.0) 
 		
 		reset_level()
 		

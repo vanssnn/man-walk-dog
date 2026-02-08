@@ -447,7 +447,7 @@ _data = {
 &"walk": SubResource("Animation_t6d5k")
 }
 
-[node name="Level7" type="Node2D"]
+[node name="Level8" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15

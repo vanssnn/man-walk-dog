@@ -10,7 +10,6 @@ class_name PlatformerComponent
 @export var jump_sfx: AudioStream = preload("res://audio/sfx/sound-jump.wav")
 @export var land_sfx: AudioStream
 @export var walk_sfx: AudioStream
-@export var die_sfx: AudioStream = preload("res://audio/sfx/GameOver.wav")
 @export var flip_sfx: AudioStream = preload("res://audio/sfx/flip_gravity.wav")
 
 var gravity_dir: int = 1
@@ -249,11 +248,6 @@ func start_death_animation() -> void:
 	
 	is_active = false
 	parent.velocity = Vector2.ZERO
-	
-	# 1. Play the Game Over SFX
-	# We use AudioManager (the Autoload) so it survives the player being disabled
-	if die_sfx:
-		AudioManager.play_sfx(die_sfx, -5.0) 
 	
 	var death_tween = get_tree().create_tween()
 	

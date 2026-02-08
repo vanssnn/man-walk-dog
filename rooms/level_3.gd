@@ -25,7 +25,6 @@ func _apply_toggle(is_action: bool) -> void:
 
 	if is_action:
 		# --- MODE: FLAG CONTROL (MAN & DOG JADI PATUNG) ---
-		label.text = "Wait, I am the flag now?"
 		_swap_body("ManCB", preload("res://man/man_rb.tscn"), "ManRB")
 		_swap_body("Flag", preload("res://flag/flag_cb.tscn"), "FlagCB")
 		# Tanpa rope di sini

@@ -59,6 +59,10 @@ func _physics_process(delta: float) -> void:
 	update_animations()
 	parent.move_and_slide()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("reset"):
+		SceneManager.change_scene(get_tree().current_scene.scene_file_path, { "pattern": "squares" })
+
 # MOVEMENTS
 func horizontal_movement() -> void:
 	var direction := Input.get_axis("move_left", "move_right")

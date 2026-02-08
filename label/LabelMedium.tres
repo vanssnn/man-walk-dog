@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://d1hrfv1e3u12m"]
+
+[ext_resource type="FontFile" uid="uid://lu38viwgn2fc" path="res://fonts/KenPixel Mini.ttf" id="1_1qrtx"]
+
+[resource]
+font = ExtResource("1_1qrtx")
+font_size = 24

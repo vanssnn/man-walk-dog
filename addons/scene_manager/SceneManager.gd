@@ -12,6 +12,30 @@ var is_transitioning := false
 @onready var _animation_player : AnimationPlayer = $AnimationPlayer
 @onready var _shader_blend_rect : ColorRect = $CanvasLayer/ColorRect
 
+# ... variabel yang sudah ada ...
+
+# 1. Tambahkan variabel untuk player musik
+@onready var _bgm_player: AudioStreamPlayer = AudioStreamPlayer.new()
+
+# 2. Tambahkan variabel untuk musik default
+# Kamu bisa drag & drop file musik ke sini di Inspector jika SceneManager adalah .tscn
+# Atau load manual di sini
+@export var default_music : AudioStream = preload("res://audio/music/bgm.wav") 
+
+# 5. Fungsi sakti agar musik tidak mengulang
+func play_bgm(music_stream: AudioStream, volume = -10.0):
+	if music_stream == null:
+		return
+	
+	# KUNCI UTAMA: Jika lagu yang mau diputar sama dengan yang sedang jalan, JANGAN RESTART
+	if _bgm_player.stream == music_stream and _bgm_player.playing:
+		return
+		
+	_bgm_player.stream = music_stream
+	_bgm_player.volume_db = volume
+	_bgm_player.play()
+	
+	
 var default_options := {
 	"speed": 2,
 	"color": Color("#000000"),
@@ -39,8 +63,16 @@ var singleton_entities := {}
 var _previous_scene = null
 
 func _ready() -> void:
+	_bgm_player.bus = "Music"
+	_bgm_player.process_mode = Node.PROCESS_MODE_ALWAYS # Musik tetap jalan walau game pause
+	add_child(_bgm_player)
+	
+	# 4. Jalankan musik default saat game pertama kali buka
+	play_bgm(default_music)
+	
 	_set_singleton_entities()
 	scene_loaded.emit()
+	
 
 func _set_singleton_entities() -> void:
 	singleton_entities = {}
